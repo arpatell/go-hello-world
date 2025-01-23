@@ -1,6 +1,17 @@
 {
-    "name": "Go Dev Container",
-    "image": "golang:1.20",
-    "features": {},
-    "mounts": ["source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"]
-  }
+  "name": "Go Dev Container",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/go": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go"
+      ]
+    }
+  },
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ]
+}
